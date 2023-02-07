@@ -9,7 +9,6 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml)
 [![R-CMD-check](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
   
