@@ -9,5 +9,6 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 License: MIT + file LICENSE
-URL: https://github.com/jamesmbaazam/rpkg_wf
+URL: https://github.com/jamesmbaazam/rpkg_wf,
+    https://jamesmbaazam.github.io/rpkg_wf/
 BugReports: https://github.com/jamesmbaazam/rpkg_wf/issues
