@@ -1,4 +1,3 @@
-James Azam
 
 <!-- badges: start -->
 

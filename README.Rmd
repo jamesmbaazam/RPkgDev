@@ -1,7 +1,6 @@
 ---
 output: github_document
 link-citations: true
-author: "James Azam"
 ---
 
 ```{r, include = FALSE}
