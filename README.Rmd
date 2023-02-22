@@ -1,28 +1,44 @@
 ---
-title: "RPkgDev"
+output: github_document
+link-citations: true
 author: "James Azam"
-output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
 ```
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
+
+# RPkgDev
   
-A "list" of commands (mostly from [devtools](https://devtools.r-lib.org/) and [usethis](https://usethis.r-lib.org/) for developing R packages. Most of the commands come from Hadley's R Packages 2e book. 
+RPkgDev provides a "list" of some of the most commonly used R commands (mostly 
+from [devtools](https://devtools.r-lib.org/) and 
+[usethis](https://usethis.r-lib.org/) for developing R packages. This package 
+is basically a sumary of the commands from Hadley Wickham's
+[R Packages 2e](https://r-pkgs.org/) book. 
+
+For more comprehensive explanations of the commands, please check their help 
+files or the book 
 
 
 ## DESCRIPTION file
 
-Add a package to "Imports" or "Suggests" with 
+Add a package to "Imports" or "Suggests" with `usethis::use_package(<name of package>)`.
+For example:
 ```{r}
-usethis::use_package()
+usethis::use_package('rmarkdown', type = 'Suggests')
 ```
 
-In general, to order and format DESCRIPTION fields according to a fixed standard,
+In general, to order and format DESCRIPTION fields according to a 
+fixed standard,
 run 
 ```{r}
 usethis::use_tidy_description()
@@ -97,7 +113,10 @@ package, call
 ```{r}
 usethis::use_lifecycle_badge()
 ```
-If the lifecycle of a package is stable, it’s not really necessary to use a badge, since that is the assumed default stage. Similarly, we typically only use a badge for a function if its stage differs from that of the associated package and likewise for an argument and the associated function.
+If the lifecycle of a package is stable, it’s not really necessary to use 
+a badge, since that is the assumed default stage. Similarly, we typically 
+only use a badge for a function if its stage differs from that of the 
+associated package and likewise for an argument and the associated function.
 
 
 ## Website
@@ -113,7 +132,8 @@ pkgdown::build_site()
 ```
 ## CRAN
 
-The following command adds an issue to your repo with a checklist of tasks to complete before submitting to CRAN:
+The following command adds an issue to your repo with a checklist of 
+tasks to complete before submitting to CRAN:
 ```{r}
 usethis::use_release_issue(version = NULL)
 ```

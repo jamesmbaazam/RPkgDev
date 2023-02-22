@@ -1,14 +1,19 @@
 Package: RPkgDev
-Title: Store of commands for R pakage development 
+Title: Store of commands for R pakage development
 Version: 0.0.0.9000
 Authors@R: 
-    person("James", "Azam", "Mba", "james.azam@lshtm.ac.uk", role = c("aut", "cre"),
+    person(c("James", "Mba"), "Azam", , "james.azam@lshtm.ac.uk", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0001-5782-7330"))
-Description: Store of commands for R pakage development 
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+Description: Store of commands for R pakage development
 License: MIT + file LICENSE
 URL: https://github.com/jamesmbaazam/rpkg_wf,
     https://jamesmbaazam.github.io/rpkg_wf/
 BugReports: https://github.com/jamesmbaazam/rpkg_wf/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
