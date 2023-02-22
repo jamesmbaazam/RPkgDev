@@ -2,21 +2,47 @@ James Azam
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/jamesmbaazam/RPkgDev/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/RPkgDev/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-# _RPkgDev_: a compendium of resources for developing R packages.
+# *RPkgDev*: a compendium of resources for developing R packages
 
-RPkgDev provides a “list” of some of the most commonly used R commands
+*RPkgDev* provides a home for useful resources for developing R
+packages.
+
+Here, we outline some of the most commonly used R helper commands
 (mostly from [devtools](https://devtools.r-lib.org/) and
-[usethis](https://usethis.r-lib.org/) for developing R packages. This
-package is basically a summary of the commands from Hadley Wickham’s [R
-Packages 2e](https://r-pkgs.org/) book.
+[usethis](https://usethis.r-lib.org/)).
+
+The commands provided here are basically a summary of those outlined in
+Hadley Wickham’s [R Packages 2e](https://r-pkgs.org/) book.
 
 For more comprehensive explanations of the commands, please check their
-help files or the book
+help files or the R Packages book.
 
-## DESCRIPTION file
+## Initial package setup
+
+Set up the minimal package
+
+``` r
+usethis::create_package() 
+```
+
+Set up a script for your functions
+
+``` r
+usethis::create_r() 
+```
+
+Generate minimal documentation from your files
+
+``` r
+devtools::document()  
+```
+
+## Package files
+
+### DESCRIPTION file
 
 Add a package to “Imports” or “Suggests” with
 `usethis::use_package(<name of package>)`. For example:
@@ -25,51 +51,61 @@ Add a package to “Imports” or “Suggests” with
 usethis::use_package('rmarkdown', type = 'Suggests')
 ```
 
-In general, to order and format DESCRIPTION fields according to a fixed
-standard, run
+In general, to order and format `DESCRIPTION` fields according to a
+fixed standard, run
 
 ``` r
 usethis::use_tidy_description()
 ```
 
-## Package README and vignettes
+### README
 
-Use rmd instead of md for README
+Use `.rmd` instead of `.md` for README
 
 ``` r
 usethis::use_readme_rmd()
 ```
 
-### Create a new rmd file for a vignette
-
-``` r
-usethis::use_vignette("my_vignette")
-```
-
-### Build README.Rmd manually
+Build README.Rmd manually
 
 ``` r
 devtools::build_readme()
 ```
 
-### Build README.Rmd with Github Actions
+Build README.Rmd with **Github Actions**
 
 ``` r
 use_github_action("render-readme.yaml")
 ```
 
-## Package build
+### Vignettes
 
-Build and check package using all known best practices
+Create a new `.rmd` file for a vignette
+
+``` r
+usethis::use_vignette("my_vignette")
+```
+
+## Building and checking the package
+
+This is an iterative process during development.
+
+Build and check package
 
 ``` r
 devtools::check()
 ```
 
-### Check package using all known best practices
+Check that the package uses all known best practices
 
 ``` r
 goodpractice::gp()
+```
+
+Lint the package
+
+``` r
+lintr::lint_package()
 ```
 
 ## Package releases
@@ -108,12 +144,12 @@ typically only use a badge for a function if its stage differs from that
 of the associated package and likewise for an argument and the
 associated function.
 
-## Website
+## Package website
 
 To do the initial website setup, run
 
 ``` r
-usethis::use_pkgdown
+usethis::use_pkgdown()
 ```
 
 To re-render your site locally, run
@@ -122,7 +158,7 @@ To re-render your site locally, run
 pkgdown::build_site()
 ```
 
-## CRAN
+## CRAN pre-release preparations
 
 The following command adds an issue to your repo with a checklist of
 tasks to complete before submitting to CRAN:
