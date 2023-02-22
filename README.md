@@ -5,7 +5,7 @@ James Azam
 [![R-CMD-check](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jamesmbaazam/rpkg_wf/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-# _RPkgDev_: resources and a compendium of commands for developing R packages.
+# _RPkgDev_: a compendium of resources for developing R packages.
 
 RPkgDev provides a “list” of some of the most commonly used R commands
 (mostly from [devtools](https://devtools.r-lib.org/) and
